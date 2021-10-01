@@ -1,6 +1,6 @@
 </p>
 <p align="center">
-<a href="https://bit.ly/2BNk3P1"><img title="Made in INDIA" src="https://img.shields.io/badge/Tool-BaapG-Attack-green.svg"></a>
+<a href="https://bit.ly/2BNk3P1"><img title="Made in INDIA" src="https://img.shields.io/badge/BaapG-Attack-green.svg"></a>
 <a href="https://bit.ly/2BNk3P1"><img title="Version" src="https://img.shields.io/badge/Version-1.0-green.svg?style=flat-square"></a>
 <a href="https://bit.ly/2BNk3P1"><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 </p>
@@ -35,7 +35,7 @@
 
 ## ABOUT TOOL :
 
-BaapG-Attack is a python3 based script which is officially made for linux based distro . It binds metasploit payload with original apk with avast antivirus bypassed .
+BaapG-Attack is a python3 based script which is officially made for linux based distro . It is inbuit mass bomber with sms, mail, calls and many more bombing 
 
 
 ## AVAILABLE ON :
@@ -77,8 +77,8 @@ BaapG-Attack is a python3 based script which is officially made for linux based 
 
 <br>
 <p align="center">
-<img width="50%" src="https://github.com/T-Dynamos/BaapG-Attack/raw/main/IMG_20210921_110233.jpg"/>
-<img width="45%" src="https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/Screenshot_2021-09-17-13-20-53-966_com.termux.jpg"/>
+<img width="50%" src="https://github.com/T-Dynamos/T-Dynamos/raw/main/bin/Screenshot_2021-10-01-13-03-59-944_com.termux.jpg"/>
+<img width="45%" src="https://github.com/T-Dynamos/T-Dynamos/raw/main/bin/Screenshot_2021-10-01-13-19-08-100_com.termux.jpg"/>
 </p>
 
 
