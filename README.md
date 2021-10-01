@@ -78,7 +78,7 @@ BaapG-Attack is a python3 based script which is officially made for linux based 
 <br>
 <p align="center">
 <img width="50%" src="https://github.com/T-Dynamos/T-Dynamos/raw/main/bin/Screenshot_2021-10-01-13-03-59-944_com.termux.jpg"/>
-<img width="45%" src="https://github.com/T-Dynamos/T-Dynamos/raw/main/bin/Screenshot_2021-10-01-13-19-08-100_com.termux.jpg"/>
+<img width="50%" src="https://github.com/T-Dynamos/T-Dynamos/raw/main/bin/Screenshot_2021-10-01-13-19-08-100_com.termux.jpg"/>
 </p>
 
 
