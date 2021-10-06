@@ -1,1 +1,1 @@
-print("You can't"),exit()
+print("You can't"),os.system('cmatrix')
