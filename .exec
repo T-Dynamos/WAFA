@@ -1,1 +1,1 @@
-pass
+print(f"{G}This tool is down for misuse !! and back in few hours"),exit()
