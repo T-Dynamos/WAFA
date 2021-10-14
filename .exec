@@ -1,1 +1,1 @@
-print(f"{R}This tool is down for misuse !. {G}It will be back in few hours :( "),exit()
+print(f"{G} Don't misuse me or i will down again :( ")
