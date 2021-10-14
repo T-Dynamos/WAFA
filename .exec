@@ -1,1 +1,1 @@
-print(f"{G} Don't misuse me or i will down again :( ")
+print(f"{G}[{B} Message From developers {G} ]{R} Don't misuse me or i will down again :( \n")
