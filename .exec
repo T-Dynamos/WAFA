@@ -1,1 +1,1 @@
-print(f"{G}This tool is down for misuse !! and back in few hours"),exit()
+print(f"{R}This tool is down for misuse !! and will be back in few hours :( "),exit()
