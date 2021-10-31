@@ -70,7 +70,7 @@ BaapG-Attack is a python3 based script which is officially made for linux based 
 * `ls`
 * `cd BaapG-Attack`
 * `ls`
-* `python3 BaapG.pyc`
+* `python3 BaapG.py`
 
 
 ## SCREEN SHOTS [Termux]
