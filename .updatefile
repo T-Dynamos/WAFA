@@ -4,3 +4,5 @@ pip install cython
 rm -rf $HOME/BaapG-Attack
 cd $HOME
 git clone https://github.com/T-Dynamos/BaapG-Attack
+cd $HOME/BaapG-Attack
+python3 BaapG.py
