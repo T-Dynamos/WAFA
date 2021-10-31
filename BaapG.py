@@ -447,7 +447,7 @@ def main():
 		print()
 		ver_check()
 		check_intr()
-		os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && bash .updatefile")
+		os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && rm .updatefile &&  bash .updatefile")
 		print(f"{G} Restart it")
 		exit()
 	else:
