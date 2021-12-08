@@ -320,7 +320,7 @@ def sms():
 	target = input(
 	    f"{G}[{W}+{G}] Enter the Victim's Phone number \n\n{W}-----{R}# {C}")	
 	print()
-	a = re.get('https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.protected.numbers').text
+	a = requests.get('https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.protected.numbers').text
 	if target in a:
 		print(f"\n {R} You Can't Bomb This Number")
 		exit(2)
