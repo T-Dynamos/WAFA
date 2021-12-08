@@ -30,7 +30,7 @@ import re
 import time
 import argparse
 import zipfile
-version = '3.6'
+version = '4.0'
 try:
   import tload
 except ModuleNotFoundError:
