@@ -19,7 +19,7 @@ apidata = {
 
 "eatsre":("https://www.eatsure.com/v1/api/send_otp",{"phone_number": target,"country_code":"IND","dialing_code":"+91","is_new_customer":false},{},"POST",'Success'),
 
-"idn":("https://www.industrybuying.com/user/api/send-otp/",{"username="str(target)+"&"},{},"POST","200")
+"idn":("https://www.industrybuying.com/user/api/send-otp/",{"username="+str(target)+"&"},{},"POST","200")
 
 }
 
