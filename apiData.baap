@@ -17,9 +17,9 @@ apidata = {
 
 "gold":("https://www.safegold.com/register",{"whatsappOptStatus":true,"enable_whatsapp":true,"is_check":true,"mobile_no":target,"middlename":"","name":""},{},"POST","redirect_url"),
 
-"eatsre":("https://www.eatsure.com/v1/api/send_otp",{"phone_number": target,"country_code":"IND","dialing_code":"+91","is_new_customer":false},{},"POST",'statusCode":2'),
+"eatsre":("https://www.eatsure.com/v1/api/send_otp",{"phone_number": target,"country_code":"IND","dialing_code":"+91","is_new_customer":false},{},"POST",'Success'),
 
-"idn":("https://www.industrybuying.com/user/api/send-otp/",{"username":str(target)+"&"},{},"POST","200")
+"idn":("https://www.industrybuying.com/user/api/send-otp/",{"username="str(target)+"&"},{},"POST","200")
 
 }
 
