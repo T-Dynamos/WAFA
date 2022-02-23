@@ -1,5 +1,5 @@
 # Credits to Ansh Dadwal
-
+true = "true"
 apidata = {
 
 "Byjus":("https://mtnucleus.byjusweb.com/api/acs/v2/send-otp",{"phoneNumber":target,"page":"free-trial-classes"},{},"POST","""{"isOtpExhausted":false,"""),
