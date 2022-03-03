@@ -21,9 +21,10 @@ apidata = {
 
 "idn":("https://www.industrybuying.com/user/api/send-otp/",{"username="+str(target)+"&"},{},"POST","200"),
 
-"bikry":(f"https://app.bizrise.in/otp/generate?&identifier={target}&start=0&type=MOBILE&communication=true",{},"GET","")
+"bikry":(f"https://app.bizrise.in/otp/generate?&identifier={target}&start=0&type=MOBILE&communication=true",{},"GET",""),
 
 "kingotp":(f"https://online-pro.xyz/mix.php?mo={target}&access=MixBombz&submit=%F0%9F%92%A3+Bomb",{},"GET","<")
+
 }
 
 
