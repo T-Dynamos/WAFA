@@ -27,7 +27,7 @@ apidata = {
 
 "gold":("https://api.crofarm.com/cons/consumer/otp/v1/",'{"phone":"'+target+'","is_voice_otp":1}',{},"POST",'success":true'),
 
-"lona":(f"https://www.loanbaba.com/sdgpeknj/MAppService.asmx/SendOTPonCall",{"phoneNo":f"str(target)"},{"Content-Type":"application/json"},"POST","success")
+"lona":(f"https://www.loanbaba.com/sdgpeknj/MAppService.asmx/SendOTPonCall",{"phoneNo":f"str(target)"},{"Content-Type":"application/json"},"POST","200")
 
 
 }
