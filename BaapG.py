@@ -297,7 +297,7 @@ def sms():
 	os.system('clear')
 	print(Style.BRIGHT+logo)
 	print()
-	print(f"{R} | WARNING |  {y}\n\n * This tool is very dangerous don't try it on your self\n ")
+	print(f"{R} | WARNING |  {Y}\n\n * This tool is very dangerous don't try it on your self\n ")
 	print()
 	target = input(
 	    f"{G}[{W}+{G}] Enter the Victim's Phone number \n\n{W}-----{R}# {C}")	
