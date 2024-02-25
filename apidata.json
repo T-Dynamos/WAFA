@@ -1,0 +1,336 @@
+{
+    "WAFA_API" : {
+            "SMS:JustDial": {
+                "url":"https://www.justdial.com/functions/whatsappverification.php?wap=77",
+                "method":"POST",
+                "headers":{
+                    "City":"NEWDELHI"
+                },
+                "modifier_map":{"data": "mob"}, 
+                "data":{"name":"","mob":"{}"},
+                "sleep_time":15,
+                "identifier":"sent\":true"
+            },
+            "SMS:Housing":{
+                "url":"https://login.housing.com/api/v2/send-otp",
+                "method":"POST",
+                "data": {
+                    "phone": "{}"
+                },
+                "modifier_map":{"data":"phone"},
+                "identifier": "message\":\"OTP Sent\"",
+                "sleep_time":30
+            },
+            "SMS:Ajio":{
+                "method": "POST",
+                "url": "https://login.web.ajio.com/api/auth/signupSendOTP",
+                "data": {
+                    "firstName": "xxps",
+                    "login": "wiqpdl223@wqew.com",
+                    "password": "QASpw@1s",
+                    "genderType": "Male",
+                    "mobileNumber": "{}",
+                    "requestType": "SENDOTP"
+                },
+                "identifier": "1",
+                "modifier_map":{"data":"mobileNumber"},
+                "sleep_time":30
+            },
+            "SMS:Unacademy":{                
+                "method": "POST",
+                "url": "https://unacademy.com/api/v1/user/get_app_link/",
+                "data": {
+                    "phone": "{}"
+                },
+                "identifier": "sent",
+                "modifier_map":{"data":"phone"},
+                "sleep_time":5
+            },
+            "SMS:pharmeasy":{
+                "method": "POST",
+                "url": "https://pharmeasy.in/api/auth/requestOTP",
+                "data": {
+                    "contactNumber": "{}"
+                },
+                "modifier_map":{"data":"contactNumber"},
+                "identifier": "resendSmsCounter",
+                "sleep_time":10
+},            
+            "Sms:RummyCircle":{
+                "method":"POST",
+                "url":"https://www.rummycircle.com/api/fl/account/v1/sendOtp",
+                "initiator":{
+                    "url":"https://www.rummycircle.com/api/fl/auth/v3/getOtp",
+                    "method":"POST",
+                    "data":{
+                        "mobile": "{}",
+                        "deviceName": "",
+                        "refCode": "",
+                        "isPlaycircle": false
+                    },
+                    "modifier_map":{"data":"mobile"}
+                },
+                "data":{
+                    "otpOnCall": false,
+                    "otpType": 8,
+                    "transactionId": "{self.init_result['data']['otpTransactionId']}",
+                    "mobile": "{}"
+                },
+                "modifier_map":{"data":"mobile", "data:" : {"transactionId":"int"}},
+                "identifier":"transactionId",
+                "sleep_time":30,
+                "init_sleep":30
+            },
+            "SMS:Licious":{
+                "url":"https://www.licious.in/api/login/signup",
+                "method":"POST",
+                "data":{
+                    "phone": "{}",
+                    "captcha_token": null
+                },
+                "modifier_map":{"data":"phone"},
+                "identifier":"success",
+                "sleep_time":300
+            },
+            "SMS:Spinny":{
+                "url":"https://api.spinny.com/api/c/user/otp-request/v2/",
+                "method":"POST",
+                "data":{
+                    "contact_number": "{}",
+                    "whatsapp": false,
+                    "code_len": 4
+                },
+                "modifier_map":{"data":"contact_number"},
+                "identifier":"Mobile Code sent",
+                "sleep_time":60
+            },
+             "SMS:CultFit":{
+                "url":"https://www.cult.fit/api/auth/loginPhoneSendOtp",
+                "method":"POST",
+                "data":{
+                    "phone": "{}",
+                    "countryCallingCode": "+91",
+                    "captchaResponse": null
+                },
+                "modifier_map":{"data":"phone"},
+                "identifier":"success\":true",
+                "sleep_time":5
+            },
+            "SMS:Udaan":{
+                "url":"https://auth.udaan.com/api/otp/send",
+                "method":"POST",
+                "params":{"client_id": "udaan-v2"},
+                "data":{
+                    "mobile": "{}"
+                },
+                "modifier_map":{"data":"mobile"},
+                "identifier":"Sent OTP successfully",
+                "datatype":"data"
+            },
+            "SMS:TATA1mg":{
+                "url":"https://www.1mg.com/auth_api/v6/create_token",
+                "method":"POST",
+                "data":{
+                    "number": "{}",
+                    "email": "",
+                    "is_corporate_user": false,
+                    "signup_source": ""
+                },
+                "modifier_map":{"data":"number"},
+                "identifier":"is_success\":true",
+                "sleep_time":30
+            },
+            "SMS:Byjus":{
+                "url":"https://byjus.com/question-answer/api/request_otp/",
+                "method":"POST",
+                "data":"91-{}",
+                "modifier_map":{"data":0},
+                "identifier":"created_at"
+            },
+            "SMS:Payrup":{
+                "url":"https://api.payrup.com/api/auth/otp/generate",
+                "method":"POST",
+                "data":{"mobileNumber":"{}"},
+                "modifier_map":{"data":"mobileNumber"},
+                "identifier":"number successfully"
+            },
+            "SMS:ShadowFax":{
+                "url":"https://api.shadowfax.in/delivery/otp/send/",
+                "method":"POST",
+                "data":{"mobile_number":"{}"},
+                "modifier_map":{"data":"mobile_number"},
+                "identifier":"sent successfully"
+            },
+            "SMS:HealthKart":{
+                "url":"https://www.healthkart.com/veronica/user/validate/1/{}/signup?plt=1&st=1",
+                "method":"GET",
+                "modifier_map":{"url":0},
+                "identifier":"Sms sent to User"
+            },
+            "SMS:Netmeds":{
+                "url":"https://www.netmeds.com/mst/rest/v1/id/details/{}",
+                "method":"GET",
+                "modifier_map":{"url":0},
+                "identifier":"status\":\"success",
+                "sleep_time":60
+            },
+            "SMS:Mfine":{
+                "url":"https://www.mfine.co/consult/proxy/uml/pbl/us/csuo",
+                "method":"POST",
+                "data":{"payload":"{{\"phone\":{target},\"realm\":\"pa\"}}"},
+                "modifier_map":{"data":{"payload":"json"}},
+                "identifier":"successfullyCreated\":true"
+            },
+            "SMS:Lybrate":{
+                "url":"https://www.lybrate.com/w-ang/v2/p/login-signup",
+                "method":"POST",
+                "data":{"mobile":"+91{}"},
+                "modifier_map":{"data":"mobile"},
+                "identifier":"Verification code has been sent"
+            },
+            "SMS:Medibuddy":{
+                "url":"https://loginprod.medibuddy.in/unified-login/user/register",
+                "method":"POST",
+                "data":{
+                    "source":"medibuddyInWeb",
+                    "platform":"medibuddy",
+                    "phonenumber":"{}",
+                    "flow":"Retail-Login-Home-Flow",
+                    "idealLoginFlow":false,
+                    "advertiserId":"5a6a5f90-6036-L8cf-9ffd-60eacff1f24d",
+                    "mbUserId":null
+                },
+                "modifier_map":{"data":"phonenumber"},
+                "identifier":"OtpStatus\":\"Sent"
+            },
+            "SMS:OneApollo":{
+                "url":"https://www.oneapollo.com/wp-json/lmsRoute/v1/user/?mobile={}",
+                "method":"GET",
+                "modifier_map":{"url":0},
+                "identifier":"enter the OTP received"
+            },
+            "SMS:EkaCare":{
+                "url":"https://cowin.eka.care/v2/generate_otp",
+                "method":"POST",
+                "data":{
+                    "mobile_no":"+91{}",
+                    "allow_whatsapp":true,
+                    "auto_retry":false
+                },
+                "modifier_map":{"data":"mobile_no"},
+                "identifier":"transaction_id",
+                "sleep_time":10
+            },
+            "SMS:Flipkart":{
+                "url":"https://2.rome.api.flipkart.com/api/7/user/otp/generate",
+                "method":"POST",
+                "data":{"loginId":"+91{}"},
+                "modifier_map":{"data":"loginId"},
+                "identifier":"remainingAttempts",
+                "sleep_time":60
+            },
+            "SMS:Gamezy":{
+                "url":"https://www.gamezy.com/api/rummy-prime/download/app/sms",
+                "method":"POST",
+                "data":{"mobile" : "{target}"},
+                "modifier_map":{"data":{"mobile":"int"}},
+                "identifier":"success\":true"
+            },
+            "CALL:Lybrate":{
+                "url":"https://www.lybrate.com/w-api/surgery/lead/submit",
+                "method":"POST",
+                "data":{
+                  "city":"Mumbai",
+                  "firstName":"Uiop Kumar",
+                  "mobile":"{}",
+                  "disease":"Hair Loss",
+                  "source":"lybrate_seo",
+                  "pageType":"Home Page",
+                  "additionalParams":{
+                      "referralUrl":"https://www.lybrate.com/",
+                      "uid":null,
+                      "lpt":"lybrate_seo"
+                  },
+                  "checkedSymptoms":[]
+                },
+                "modifier_map":{"data":"mobile"},
+                "identifier":"successful\":true"
+            },
+            "CALL:MyJAR":{
+                "url":"https://prod.myjar.app/v2/api/auth/sendOTP/call?phoneNumber={}",
+                "method":"GET",
+                "modifier_map":{"url":0},
+                "stop_identifier":"OTP Limit reached for phone-number",
+                "identifier":"success\":true}"
+            },
+            "CALL:TATA1mg":{
+                "url":"https://www.1mg.com/auth_api/v6/create_token",
+                "method":"POST",
+                "data":{
+                    "number": "{}",
+                    "email": "",
+                    "is_corporate_user": false,
+                    "otp_on_call": true,
+                    "signup_source": ""
+                },
+                "modifier_map":{"data":"number"},
+                "identifier":"is_success\":true",
+                "sleep_time":30,
+                "stop_identifier":"Max limit reached"
+            },
+            "CALL:Unacademy":{
+                "url":"https://unacademy.com/api/v3/user/user_check/?enable-email=true",
+                "method":"POST",
+                "data":{
+                    "phone":"{}",
+                    "country_code":"IN",
+                    "otp_type":2,
+                    "email":"",
+                    "send_otp":true,
+                    "is_un_teach_user":false
+                },
+                "initiator":{
+                    "url":"https://unacademy.com/api/v3/user/user_check/?enable-email=true",
+                    "method":"POST",
+                    "data":{
+                        "phone":"{}",
+                        "country_code":"IN",
+                        "otp_type":1,
+                        "email":"",
+                        "send_otp":true,
+                        "is_un_teach_user":false
+                    },
+                    "modifier_map":{"data":"phone"}
+                },
+                "modifier_map":{"data":"phone"},
+                "identifier":"Call has been initiated",
+                "sleep_time":60
+            },
+            "CALL:RummyCircle":{
+                "method":"POST",
+                "url":"https://www.rummycircle.com/api/fl/account/v1/sendOtp",
+                "initiator":{
+                    "url":"https://www.rummycircle.com/api/fl/auth/v3/getOtp",
+                    "method":"POST",
+                    "data":{
+                        "mobile": "{}",
+                        "deviceName": "",
+                        "refCode": "",
+                        "isPlaycircle": false
+                    },
+                    "modifier_map":{"data":"mobile"}
+                },
+                "data":{
+                    "otpOnCall": true,
+                    "otpType": 8,
+                    "transactionId": "{self.init_result['data']['otpTransactionId']}",
+                    "mobile": "{}"
+                },
+                "modifier_map":{"data":"mobile", "data:" : {"transactionId":"int"}},
+                "identifier":"transactionId",
+                "sleep_time":30,
+                "init_sleep":30,
+                "duplicate":5
+            }
+    }
+}
